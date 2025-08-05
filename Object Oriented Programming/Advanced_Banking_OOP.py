@@ -147,8 +147,8 @@ class Bank_account:
 # TESTING
 
 # Create two accounts
-daniel_account = Bank_account(3100562134, 'Daniel', 10000, pin=1234)
-jane_account = Bank_account(3100562135, 'Jane', 5000, pin=4321)
+daniel_account = Bank_account(3100562134, 'Daniel', 10000, pin=2578)
+jane_account = Bank_account(3100562135, 'Jane', 5000, pin=6789)
 
 # Deposit
 print(daniel_account.deposit(5000, pin=2578))
@@ -157,7 +157,7 @@ print(daniel_account.deposit(5000, pin=2578))
 print(daniel_account.withdraw(2000, pin=2578))
 
 # Transfer to Person
-print(daniel_account.transfer(3000, jane_account, pin=1234))
+print(daniel_account.transfer(3000, jane_account, pin=2578))
 
 # Print Daniel’s transaction history
 print("\n--- Daniel's Transactions ---")
@@ -169,4 +169,4 @@ jane_account.print_transaction_history()
 
 # Freeze and test
 daniel_account.freeze_account()
-print(daniel_account.withdraw(1000, pin=1234))  # Should fail due to freeze
+print(daniel_account.withdraw(1000, pin=2578))  # Should fail due to freeze
